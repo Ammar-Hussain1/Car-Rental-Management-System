@@ -9,6 +9,20 @@
 
 using namespace std;
 
+string encrypt(string str){
+	for(int i = 0;i<str.length();i++){
+		str[i]+=3;
+	}
+	return str;
+}
+
+string decrypt(string str){
+	for(int i = 0;i<str.length();i++){
+		str[i]-=3;
+	}
+	return str;
+}
+
 struct customer {
 	string username;
 	string password;
@@ -442,6 +456,7 @@ struct admin {
 		read_admin_info >> username;
 		read_admin_info >> password;
 		read_admin_info.close();
+		password = decrypt(password);
 		cout << "Enter User Name: ";
 		cin >> username_input;
 		cout << "Enter Password: ";
@@ -462,6 +477,7 @@ struct admin {
 		if (password == password_input) {
 			cout << "Enter New Password:";
 			cin >> password;
+			password = encrypt(password);
 			ofstream write_admin_info;
 			write_admin_info.open("admin.txt");
 			write_admin_info << username << endl;
