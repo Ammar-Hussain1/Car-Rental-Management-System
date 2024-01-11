@@ -20,4 +20,4 @@ Fork this Repository and clone it into your system and compile the source file.
 
 ## RUNNING THE MANAGEMENT SYSTEM
 Run the compiled executable.
-*Note: The password for admin is "admin@1", you can change it from inside the admin section*
+>Note: The password for admin is "admin@1", you can change it from inside the admin section
