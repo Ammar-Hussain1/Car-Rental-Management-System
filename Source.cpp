@@ -1,5 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <String>
+#include <string.h>
 #include <fstream>
 #include <cmath>
 #include <Windows.h>
@@ -691,7 +693,7 @@ struct admin {
 			return;
 		}
 
-		strcpy_s(arr, Customer_List[CN - 1].c_str());
+		strcpy(arr, Customer_List[CN - 1].c_str());
 
 		for (int i = 0; arr[i] != '\0'; i++) {
 			if (isupper(arr[i])) {
@@ -782,7 +784,7 @@ struct admin {
 		}
 		cout << "Enter the Customer Number you want to UPDATE:";
 		cin >> CN;
-		strcpy_s(arr, Customer_List[CN - 1].c_str());
+		strcpy(arr, Customer_List[CN - 1].c_str());
 		for (int i = 0; arr[i] != '\0'; i++)
 		{
 			if (isupper(arr[i]))
